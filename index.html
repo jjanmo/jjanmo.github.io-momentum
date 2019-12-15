@@ -45,9 +45,10 @@
                 <form class="todosForm">
                     <label>
                         <div id="todosTitle">What is your main focus for today?</div>
-                        <input id="todosInput" type="text" autocomplete="off" />
+                        <input id="todosInput" type="text" spellcheck="false" contenteditable="false" autocomplete="off" />
                     </label>
                 </form>
+                <div class="warningMsg"></div>
                 <div class="todos">
                     <div class="todosMsg hide">
                         <i class="fas fa-chevron-circle-down"></i>
@@ -73,5 +74,5 @@
     <script src="todos.js"></script>
     <script src="clock.js"></script>
     <script src="weather.js"></script>
-    <!-- <script src="quote.js"></script>   -->
+    <script src="quote.js"></script>
 </html>

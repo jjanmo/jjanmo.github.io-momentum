@@ -1,6 +1,7 @@
 const todosForm = document.querySelector(".todosForm");
 const todosInput = todosForm.querySelector("#todosInput"); //input tag
 const todosUl = document.querySelector(".todosList"); //ul tag
+const warningMsg = document.querySelector(".warningMsg");
 
 let todos;
 const READY = "ready";
@@ -8,6 +9,14 @@ const FINISHED = "finished";
 
 function handleTodosSubmit(e) {
     e.preventDefault();
+    if (todos.length + 1 > 3) {
+        warningMsg.innerHTML = "Up to 3 todos can be stored. Finish them FIRST!";
+        setTimeout(function() {
+            warningMsg.innerHTML = "";
+        }, 2000);
+        todosInput.value = "";
+        return;
+    }
     const obj = makeTodosObj(todosInput.value);
     if (!todos) todos = [];
     todos.push(obj);

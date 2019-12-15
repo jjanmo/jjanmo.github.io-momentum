@@ -12,7 +12,7 @@ function getRandomImage() {
             return response.json();
         })
         .then(function(json) {
-            console.log(json);
+            // console.log(json);
             paintImage(json);
         });
 }

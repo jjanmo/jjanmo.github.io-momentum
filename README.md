@@ -1,11 +1,14 @@
-# Google Momentum App Clone Coding 
+# Google Momentum App Clone Coding
+
 Momentum App made with VanillaJS
 
 ## Features
-  - [x] Clock
-  - [x] Username Persistance
-  - [x] To Do List
-  - [x] Random Background Image
-  - [x] Show Image Information 
-  - [x] Weather with Geolocation
-  - [ ] Random Quote 
+
+-   [x] Clock
+-   [x] Save & Load Username
+-   [x] Save & Load Todo List
+-   [x] Check & Confirm Todo List
+-   [x] Show Random Background Image
+-   [x] Show Image Information
+-   [x] Weather & Temperature with Geolocation
+-   [x] Show Random Quote

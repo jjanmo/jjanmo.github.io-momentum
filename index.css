@@ -46,6 +46,7 @@ body {
     height: 80px; */
     text-align: center;
     opacity: 0.7;
+    user-select: all;
 }
 
 .weather_icon {
@@ -157,13 +158,20 @@ body {
     font-size: 40px;
     text-align: center;
 }
+.warningMsg {
+    text-align: center;
+    color: #e74c3c;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
 .todosMsg {
     margin: 40px 0 10px 0;
     font-size: 35px;
     font-family: "Lilita One", cursive;
     color: #bdc3c7;
 }
-.fas {
+.fa-chevron-circle-down {
     font-size: 30px;
 }
 .todosList {
@@ -218,11 +226,32 @@ body {
 
 /* quote */
 
+.quoteContainer {
+    position: fixed;
+    top: 90%;
+    margin: 10px;
+    /* color: black; */
+    user-select: all;
+    opacity: 0.9;
+}
+
+.quoteText {
+    width: 800px;
+    text-align: center;
+}
+
+.quoteSource {
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
 /* image  */
 .imageContainer {
     position: fixed;
     top: 90%;
     left: 2%;
+    user-select: all;
 }
 
 .image-item {
