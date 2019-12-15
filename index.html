@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>MOMEMTUM</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body class="backgroundImage">
+        <div class="wrapper">
+            <div class="weatherContainer">
+                <div class="weather">
+                    <img class="weather_icon" />
+                    <div class="temperature"></div>
+                </div>
+                <div class="city"></div>
+            </div>
+            <div class="clockContainer">
+                <div class="clock">00:00</div>
+            </div>
+            <form class="nameForm">
+                <label>
+                    <div id="initTitle">Hello what's your name?</div>
+                    <input
+                        id="nameInput"
+                        type="text"
+                        maxlength="20"
+                        spellcheck="false"
+                        contenteditable="false"
+                        autocomplete="off"
+                    />
+                </label>
+            </form>
+            <div class="greetingContainer hide">
+                <div class="greeting">
+                    <div class="greeting-item message"></div>
+                    <div class="greeting-item nameDiv" spellcheck="false" contenteditable="false"></div>
+                    <div class="greeting-item iconDiv">
+                        <i class="far fa-edit"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="todosContainer hide">
+                <form class="todosForm">
+                    <label>
+                        <div id="todosTitle">What is your main focus for today?</div>
+                        <input id="todosInput" type="text" autocomplete="off" />
+                    </label>
+                </form>
+                <div class="todos">
+                    <div class="todosMsg hide">
+                        <i class="fas fa-chevron-circle-down"></i>
+                        <span class="msg">SEIZE THE DAY</span>
+                    </div>
+                    <ul class="todosList"></ul>
+                </div>
+            </div>
+            <div class="quoteContainer">
+                <div class="quoteText"></div>
+                <div class="quoteSource"></div>
+            </div>
+            <div class="imageContainer">
+                <div class="image-item location"></div>
+                <div class="image-item description"></div>
+                <div class="image-item photographer"></div>
+            </div>
+        </div>
+    </body>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="image.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todos.js"></script>
+    <script src="clock.js"></script>
+    <script src="weather.js"></script>
+    <!-- <script src="quote.js"></script>   -->
+</html>
