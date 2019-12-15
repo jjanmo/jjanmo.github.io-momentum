@@ -9,7 +9,7 @@ const FINISHED = "finished";
 
 function handleTodosSubmit(e) {
     e.preventDefault();
-    if (todos.length + 1 > 3) {
+    if (todos && todos.length + 1 > 3) {
         warningMsg.innerHTML = "Up to 3 todos can be stored. Finish them FIRST!";
         setTimeout(function() {
             warningMsg.innerHTML = "";
