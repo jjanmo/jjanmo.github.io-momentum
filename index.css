@@ -31,9 +31,11 @@ body {
 .wrapper {
     position: relative;
     display: flex;
+    /* width: 100vh; */
+    height: 100vh;
     flex-direction: column;
     align-items: center;
-    justify-content: middle;
+    justify-content: center;
 }
 
 /* weather  */
@@ -65,7 +67,7 @@ body {
 
 .clockContainer {
     font-size: 150px;
-    padding-top: 1%;
+    /* padding-top: 1%; */
     /* font-weight: bold; */
     /* font-family: "Roboto", sans-serif; */
 }
@@ -228,7 +230,8 @@ body {
 
 .quoteContainer {
     position: fixed;
-    top: 90%;
+    top: 88vh;
+    left: 58vh;
     margin: 10px;
     /* color: black; */
     user-select: all;
@@ -244,13 +247,14 @@ body {
     width: 300px;
     text-align: center;
     margin: auto;
+    color: #c7ecee;
 }
 
 /* image  */
 .imageContainer {
     position: fixed;
-    top: 90%;
-    left: 2%;
+    top: 88vh;
+    left: 3vh;
     user-select: all;
 }
 
