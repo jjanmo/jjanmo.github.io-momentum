@@ -101,7 +101,7 @@ body {
     border: 0;
     border-bottom: 1px solid white;
     width: 95%;
-    height: 95%;
+    /* height: 95%; */
     color: white;
     font-size: 40px;
     text-align: center;
