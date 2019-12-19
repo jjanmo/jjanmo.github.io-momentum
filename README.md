@@ -15,4 +15,4 @@ Momentum App made with VanillaJS
 
 ## Click here
 
-[https://jjanmo.github.io/jjanmo.github.io-momentum/]
+[DEMO](https://jjanmo.github.io/jjanmo.github.io-momentum/)
