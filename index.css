@@ -309,9 +309,6 @@ body {
 }
 
 @media (min-width: 1281px) {
-    .quoteContainer {
-        left: 58vh;
-    }
     .weatherContainer {
         left: 92%;
     }
