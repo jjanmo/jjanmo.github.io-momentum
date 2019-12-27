@@ -257,6 +257,13 @@ body {
     user-select: all;
 }
 
+.description {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .image-item {
     margin-bottom: 1px;
     opacity: 0.9;
