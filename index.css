@@ -20,8 +20,8 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
     color: white;
     /* color: #bdc3c7; */
     user-select: none;
@@ -109,7 +109,7 @@ body {
 }
 
 .nameDiv {
-    font-size: 60px;
+    font-size: 40px;
     outline: none;
 }
 
@@ -186,13 +186,14 @@ body {
 .item {
     width: 100%;
     font-size: 38px;
+    margin-top: 5px;
 }
 
 .checkbox {
     display: inline-block;
     height: 35px;
     width: 35px;
-    margin: 7px;
+    margin-right: 7px;
     cursor: pointer;
     vertical-align: bottom;
     /* background-color: #000000; */
@@ -206,7 +207,7 @@ body {
 
 .todo {
     display: inline-block;
-    margin: 5px;
+    margin-right: 5px;
 }
 
 .middleline {
@@ -220,7 +221,6 @@ body {
     background-size: 100%;
     width: 40px;
     height: 40px;
-    margin: 5px;
     cursor: pointer;
     vertical-align: bottom;
     opacity: 0;
@@ -229,9 +229,8 @@ body {
 /* quote */
 
 .quoteContainer {
-    position: fixed;
+    position: absolute;
     top: 88vh;
-    left: 58vh;
     margin: 10px;
     /* color: black; */
     user-select: all;
@@ -261,4 +260,52 @@ body {
 .image-item {
     margin-bottom: 1px;
     opacity: 0.9;
+}
+
+@media (max-width: 1280px) {
+    .clockContainer {
+        font-size: 110px;
+    }
+    .message {
+        font-size: 45px;
+    }
+    #initTitle {
+        font-size: 45px;
+    }
+    #todosTitle {
+        font-size: 35px;
+    }
+    #todosInput {
+        font-size: 25px;
+    }
+    .todosMsg {
+        margin: 10px 0 0 0;
+        font-size: 25px;
+    }
+    .item {
+        font-size: 20px;
+    }
+    .checkbox {
+        height: 20px;
+        width: 20px;
+    }
+    .removeBtn {
+        width: 20px;
+        height: 20px;
+    }
+    .fa-chevron-circle-down {
+        font-size: 20px;
+    }
+    .weatherContainer {
+        left: 90%;
+    }
+}
+
+@media (min-width: 1281px) {
+    .quoteContainer {
+        left: 58vh;
+    }
+    .weatherContainer {
+        left: 92%;
+    }
 }
