@@ -17,13 +17,17 @@ function getQuote() {
 }
 
 function modifyContent(content) {
+    if (content.length > 130) getQuote();
     const index = content.indexOf(".");
     if (index === content.length - 1) return content;
     else {
         const tmp = content.split(".");
-        const newContent = tmp.join(".<br>");
-        console.log(newContent);
-        return newContent;
+        if (tmp.length > 2) getQuote;
+        else {
+            const newContent = tmp.join(".<br>");
+            console.log(newContent);
+            return newContent;
+        }
     }
 }
 
