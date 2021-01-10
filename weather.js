@@ -1,19 +1,18 @@
-const weatherContainer = document.querySelector(".weatherContainer");
-const weatherDiv = weatherContainer.querySelector(".weather");
-const weatherIconImg = weatherContainer.querySelector(".weather_icon");
-const temperatureDiv = weatherContainer.querySelector(".temperature");
-const cityDiv = weatherContainer.querySelector(".city");
+const weatherContainer = document.querySelector('.weatherContainer');
+const weatherDiv = weatherContainer.querySelector('.weather');
+const weatherIconImg = weatherContainer.querySelector('.weather_icon');
+const temperatureDiv = weatherContainer.querySelector('.temperature');
+const cityDiv = weatherContainer.querySelector('.city');
 
-const COORDS = "coords";
-const WEATHER_API_KEY = "2a4dfa6f9892a50c75182e50c8cc820d";
+const COORDS = 'coords';
+const WEATHER_API_KEY = '2a4dfa6f9892a50c75182e50c8cc820d';
 
 function getWeather(lat, lon) {
     fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
-        .then(function(response) {
+        .then(function (response) {
             return response.json();
         })
-        .then(function(json) {
-            //console.log(json);
+        .then(function (json) {
             const icon = json.weather[0].icon;
             const weatherDescription = json.weather[0].description;
             const temperature = json.main.temp;
@@ -31,12 +30,11 @@ function saveCoords(coordsObj) {
 }
 
 function handleGeoSuccess(position) {
-    console.log(position);
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const coordsObj = {
         latitude,
-        longitude
+        longitude,
     };
     saveCoords(coordsObj);
     getWeather(latitude, longitude);

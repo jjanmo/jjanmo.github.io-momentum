@@ -1,18 +1,17 @@
-const greetingContainer = document.querySelector(".greetingContainer");
-const greeting = greetingContainer.querySelector(".greeting");
-const todosContainer = document.querySelector(".todosContainer");
+const greetingContainer = document.querySelector('.greetingContainer');
+const greeting = greetingContainer.querySelector('.greeting');
+const todosContainer = document.querySelector('.todosContainer');
 
-const nameForm = document.querySelector(".nameForm"); //form tag
-const nameInput = nameForm.querySelector("input"); //input tag
+const nameForm = document.querySelector('.nameForm');
+const nameInput = nameForm.querySelector('input');
 
-const nameDiv = document.querySelector(".nameDiv"); //div tag : name
-const iconDiv = document.querySelector(".iconDiv"); //div tag : icon
+const nameDiv = document.querySelector('.nameDiv');
+const iconDiv = document.querySelector('.iconDiv');
 
-// const mantra = "Remember who you are";
-const msg = ["Good morning,", "Good afternoon,", "Good evening,"];
+const msg = ['Good morning,', 'Good afternoon,', 'Good evening,'];
 
 function setMessage() {
-    const message = greeting.querySelector(".message");
+    const message = greeting.querySelector('.message');
     const now = new Date();
     if (now.getHours() >= 19 || now.getHours() < 6) message.innerHTML = msg[2];
     else if (now.getHours() >= 12) message.innerHTML = msg[1];
@@ -20,11 +19,11 @@ function setMessage() {
 }
 
 function saveName(name) {
-    localStorage.setItem("userName", name);
+    localStorage.setItem('userName', name);
 }
 
 function loadName() {
-    const name = localStorage.getItem("userName");
+    const name = localStorage.getItem('userName');
     return name;
 }
 
@@ -37,19 +36,19 @@ function handleNameSubmit(e) {
 
 function paintGreeting(name) {
     nameDiv.innerHTML = name;
-    nameForm.classList.add("hide");
-    greetingContainer.classList.remove("hide");
-    todosContainer.classList.remove("hide");
+    nameForm.classList.add('hide');
+    greetingContainer.classList.remove('hide');
+    todosContainer.classList.remove('hide');
     setMessage();
 }
 
 function handleNameEdit() {
-    if (nameDiv.classList.contains("borderline")) {
-        nameDiv.setAttribute("contenteditable", "false");
-        nameDiv.classList.remove("borderline");
+    if (nameDiv.classList.contains('borderline')) {
+        nameDiv.setAttribute('contenteditable', 'false');
+        nameDiv.classList.remove('borderline');
     } else {
-        nameDiv.setAttribute("contenteditable", "true");
-        nameDiv.classList.add("borderline");
+        nameDiv.setAttribute('contenteditable', 'true');
+        nameDiv.classList.add('borderline');
         nameDiv.focus();
     }
 }
@@ -58,22 +57,22 @@ function handleEnterKey(e) {
     if (e.keyCode === 13) {
         const newName = nameDiv.innerHTML;
         saveName(newName);
-        nameDiv.setAttribute("contenteditable", "false");
-        nameDiv.classList.remove("borderline");
+        nameDiv.setAttribute('contenteditable', 'false');
+        nameDiv.classList.remove('borderline');
         return false;
     }
 }
 
 function renewName() {
-    nameDiv.addEventListener("keydown", handleEnterKey);
+    nameDiv.addEventListener('keydown', handleEnterKey);
 }
 
 function editName() {
-    iconDiv.addEventListener("click", handleNameEdit);
+    iconDiv.addEventListener('click', handleNameEdit);
 }
 
 function startMomentum() {
-    nameForm.addEventListener("submit", handleNameSubmit);
+    nameForm.addEventListener('submit', handleNameSubmit);
 }
 
 function init() {
